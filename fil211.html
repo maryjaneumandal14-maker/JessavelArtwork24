@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pintig ng Panitikan | FIL 211</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showPoem(poemId) {
+        // itago lahat ng tula
+        const poems = document.querySelectorAll('.poem');
+        poems.forEach(poem => {
+            poem.style.display = 'none';
+        });
+
+        // ipakita ang piniling tula
+        document.getElementById(poemId).style.display = 'block';
+
+        // tanggalin active sa lahat ng buttons
+        const buttons = document.querySelectorAll('.poem-buttons button');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // lagyan ng active ang tamang button
+        event.target.classList.add('active');
+    }
+</script>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero">
+    <h1>Banga ng Pagkatuto at Kaalaman</h1>
+    <p>FIL 211</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="sub-nav">
+    <a href="#" onclick="showSection('tula')">MGA TULA</a>
+    <a href="#" onclick="showSection('kwento')">MAIKLING KWENTO</a>
+    <a href="#" onclick="showSection('obra')">MGA OBRA</a>
+    <a href="index.html" class="back">← BUMALIK</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+
+    <!-- MGA TULA -->
+<section id="tula" class="content">
+    <h2>Koleksyon ng mga Tula</h2>
+
+    <!-- TULA BUTTONS -->
+    <div class="poem-buttons">
+        <button onclick="showPoem('tahanan')">Ako'y Gurong Hinuhubog</button>
+        <button onclick="showPoem('dosdos')">Dos-Dos</button>
+        <button class="active" onclick="showPoem('comienzo')">Yo soy tu comienzo</button>
+    </div>
+
+    <!-- TULA 1 -->
+    <div id="tahanan" class="poem" style="display:none;">
+    <h3>Ako'y Gurong Hinuhubog</h3>
+
+    <!-- Stanza 1 -->
+    <p class="stanza">
+        Sa tahimik na umaga, pangarap ang dala,<br>
+        Bag na may libro, pusong puno ng pag-asa.<br>
+        Kahit pagod ang isip at luha’y sumisilip,<br>
+        Sa tawag ng edukasyon, hindi ako lilihis.
+    </p>
+
+    <!-- Stanza 2 -->
+    <p class="stanza">
+        Bawat aral na mahirap, buong tapang kong tinatanggap,<br>
+        Sapagkat sa bawat hirap, may gurong hinuhubog sa yakap.<br>
+        Hindi pa man ganap, ngunit malinaw ang direksyon,<br>
+        Sa silid-aralan balang araw, ako’y magiging gabay ng henerasyon.
+    </p>
+
+    <!-- Stanza 3 -->
+    <p class="stanza">
+        May gabing puyat, may takot sa pagkabigo,<br>
+        Ngunit mas malakas ang sigaw ng pangarap ko.<br>
+        Dahil ang edukasyon ay hindi lang propesyon,<br>
+        Ito’y panata ng pusong may malasakit at misyon.
+    </p>
+</div>
+
+
+    <!-- TULA 2 -->
+    <div id="dosdos" class="poem" style="display:none;">
+        <h3>DOS-DOS</h3>
+        <p>
+            Sa bawat hakbang may tunog ang lupa<br>
+            Dos-dos ang yabag ng pangarap kong suma<br>
+            Hindi man tiyak ang dulo ng daan<br>
+            Patuloy pa rin sa sariling laban
+        </p>
+    </div>
+
+    <!-- TULA 3 (DEFAULT) -->
+    <div id="comienzo" class="poem">
+        <h3>YO SOY TU COMIENZO</h3>
+        <p><em>(Ako ang iyong simula)</em></p>
+
+        <p>
+            Malayo-layo na rin ang naiwan mong lakarin<br>
+            Pabalik sa simula at dating mga hangarin<br>
+            Sisikiping tahakin bawat hagdan na hahanapin<br>
+            Subukan nating bumalik at lahat ay uunawain
+        </p>
+
+        <p>
+            Ngayo’y muling sumisigla bawat munting gunita<br>
+            Liwanag nating ang loob kahit wala ang pahinga<br>
+            Ulan na’y di alintana sa oras na wala ka<br>
+            Pero buhay ko’y sumisigla tuwing ika’y naaalala
+        </p>
+    </div>
+</section>
+
+
+    <!-- MAIKLING KWENTO -->
+    <section id="kwento" class="content" style="display:none;">
+    <h2>Maikling Kwento</h2>
+
+    <div class="story">
+        <h3>Sa huling pag-ulan</h3>
+
+        <p style="text-align:center;">
+    <img src="images/kwento.jpeg" alt="Anna sa ulan" style="max-width:50%; height:auto; border-radius:10px;">
+</p>
+
+        <p>
+            Unang araw ng kolehiyo. Abala si Anna sa paghahanap ng tamang silid-aralan nang biglang mabangga siya ng isang lalaki. Tumapon ang hawak niyang kape, at agad itong nag-abot ng panyo. "Sorry! Ako nga pala si Cesar" nakangiting sabi ng binata. "Anna" maikling tugon niya, habang pinupunasan ang bahid ng kape sa kaniyang blouse.
+        </p>
+
+        <p>
+            Mula noon, araw-araw na silang sabay pumasok, sabay kumain, sabay umuuwi. Ang dati niyang mundo na puro pag-aaral ay napuno ng tawanan, pangarap, at pag-ibig. Madalas nilang tambayan ang parkeng iyon, sa ilalim ng lumang puno ng acacia. Dito sila nangakong walang iwanan, kahit anong mangyari.
+        </p>
+
+        <p>
+            Ngunit hindi lahat ng pangako ay natutupad. Dumating ang panahong sinubok sila ng tadhana. Naging abala si Cesar sa trabaho matapos silang makapagtapos. Nagsimula siyang mangarap para sa pamilya nila sa hinaharap pero sa proseso, unti-unti siyang naging estranghero. 
+        </p>
+
+        <p>
+            Isang gabi, habang hinihintay ni Anna ang text o tawag ni Cesar, isang mensahe ang dumating: "Pasensya na, Anna. Kailangan kong unahin muna ang mga pangarap ko." Hindi niya alam kung paano sasagutin iyon. Ang "mga pangarap" na tinutukoy ni Cesar ay ang pangarap nilang dalawa noon pero ngayo’y tila kanya na lang.
+        </p>
+
+        <p>
+            Makalipas ang ilang buwan, nagbago na si Cesar. Bihira nang magparamdam, bihira nang ngumiti. At isang gabi, habang umuulan, tinapos ni Anna ang lahat. Sa gitna ng pag-iyak at pagbagsak ng ulan, binigkas niya ang mga salitang ayaw niyang sabihin: "Kung dito ka na masaya, Cesar... hindi na kita pipigilan." At tulad ng ulan, tuluyan siyang bumitaw.
+        </p>
+
+        <p>
+            Ngayon, limang taon na ang nakalipas. Balitang ikakasal na raw si Cesar sa ibang babae. Nabasa ni Anna iyon sa social media, isang post na tila sibat sa puso niya. Ngunit sa halip na magalit, nginitian niya ang sarili. Marahil iyon ang tadhana, at ang kanya ay tanggapin na lang ang katotohanang hindi lahat ng iniibig ay para sa atin.
+        </p>
+
+        <p>
+            Nang gabing iyon, umulan muli. At para bang tinutulak siya ng panahon na balikan ang lugar kung saan lahat nagsimula – ang parke sa ilalim ng acacia. Pagdating niya roon, nagulat siya. Sa lilim ng parehong puno, nandoon si Cesar, basang-basa rin ng ulan. Nagtagpo ang kanilang mga mata. Walang salitang lumabas, tanging luha at ngiti.
+        </p>
+
+        <p>
+            "Bakit ka nandito?" tanong ni Anna, nanginginig sa lamig. "Hindi ko alam," sagot ni Cesar. "Siguro... kasi gusto kong maramdaman ulit 'yung kapayapaang minsan kong natagpuan sa'yo." Tahimik. Tanging patak ng ulan ang maririnig. At doon, sa gitna ng ulan, bumalik sa kanya ang lahat ng dahilan kung bakit niya minahal. Ngunit alam niyang huli na ang lahat.
+        </p>
+
+        <p>
+            Naalala ni Anna ang huling gabi nila. "Kung mahal mo talaga ako," sabi ni Cesar noon, "bakit parang ikaw ang unang sumusuko?" "Hindi ako sumusuko, Cesar. Pinapalaya lang kita. Dahil alam kong hindi mo na ako kasama sa mga pangarap mo."
+        </p>
+
+        <p>
+            At doon nagtapos ang lahat. Ang mga salitang iyon ang naging pader sa pagitan nila, isang pader na itinayo hindi ng galit, kundi ng pag-unawa. Ngayon, narito silang muli sa parehong lugar. Parehong ulan, ngunit ibang sitwasyon. "Masaya ka na ba?" tanong ni Anna pilit ang ngiti. "Masaya ako... pero iba pa rin kapag nakikita kita," sagot ni Cesar, sabay yuko. 
+        </p>
+
+        <p>
+            "May bahagi pa rin akong nagtataka paano kung hindi tayo bumitaw?" Napangiti si Anna, sabay tanaw sa madilim na langit. "Siguro, hindi natin malalaman. Pero kung sakaling magtagpo ulit ang mga bituin, baka doon na natin malaman." Tahimik silang parehong tumawa, alam na pareho ang iniisip na tapos na sila, pero hindi kailanman mawawala ang alaala ng pagmamahalan nila.
+        </p>
+
+        <p>
+            Umuulan pa rin. Ngunit sa puso ni Anna, tila huminto na ang bagyo. At sa unang pagkakataon, nakaramdam siya ng payapang paglaya. Makalipas ang ilang buwan, isang sobre ang dumating sa bahay ni Anna – isang imbitasyon sa kasal nina Cesar at ng babaeng minsan lang niyang nakilala. Ngunit hindi siya umiyak. Sa halip, nginitian niya ito at inilagay sa kahon ng mga alaala. Binuksan niya ang bintana at sinalubong ang ulan.
+        </p>
+
+        <p>
+            Natutunan niyang mahalin ang alaala, ngunit mas piliin ang kasalukuyan. Umalis siya sa bahay, dala ang payong at ngiti. Sa kanto ng kalye, isang estrangherong lalaki ang nag-abot ng panyo nang hindi sinasadya siyang mabangga. "Sorry," sabi nito, "Ako nga pala si Adrian." Ngumiti si Anna. "Anna," sagot niya. At doon, sa gitna ng ulan, parang muling nagsimulang umikot ang mundo ni Anna kahit wala na si Cesar.
+        </p>
+    </div>
+</section>
+
+
+    <!-- MGA OBRA -->
+    <section id="obra" class="content" style="display:none;">
+    <h2>Mga Obra</h2>
+
+    <div class="cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="images/obra.jpeg" alt="Mga Obra" style="width:100%; height:200px; object-fit:cover;">
+            <h3>Hulaan mo kung sino ako</h3>
+            <p>Maikling description ng obra.</p>
+        </div>
+
+        <!-- Card 2 - halimbawa kung magdadagdag ka ng picture -->
+        <div class="card">
+            <img src="images/let.jpeg" alt="Isa pang Obra" style="width:100%; height:200px; object-fit:cover;">
+            <h3>Pangalawang Obra</h3>
+            <p>Maikling description ng pangalawang obra.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/lete.jpeg" alt="Ikatlong Obra" style="width:100%; height:200px; object-fit:cover;">
+            <h3>Ikatlong Obra</h3>
+            <p>Maikling description ng ikatlong obra.</p>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 | Pintig ng Panitikan - Educational
+</footer>
+
+</body>
+</html>

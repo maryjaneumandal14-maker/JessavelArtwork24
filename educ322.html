@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<title>EDUC 322 | Portfolio</title>
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f2f2;
+    color: #3a1f0f;
+}
+
+/* HERO HEADER */
+.hero {
+    background-image: url("images/banner.jpeg"); /* palitan ng EDUC 322 image */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* NAVIGATION */
+.sub-nav {
+    background: #3a1f0f;
+    padding: 12px;
+    text-align: center;
+}
+
+.sub-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sub-nav a:hover {
+    text-decoration: underline;
+}
+
+.back {
+    color: #ffd700;
+}
+
+/* MAIN CONTENT */
+.content {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8b0000;
+}
+
+.content p {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* SECTION BUTTONS */
+.section-buttons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.section-buttons button {
+    background: white;
+    border: 2px solid #8b0000;
+    color: #8b0000;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.section-buttons button:hover {
+    background: #8b0000;
+    color: white;
+}
+
+.section-buttons button.active {
+    background: #8b0000;
+    color: white;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    padding: 15px 0 5px 0;
+}
+
+.card p {
+    padding: 0 15px 15px 15px;
+    font-size: 14px;
+    color: #3a1f0f;
+}
+
+.card button {
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    border: 2px solid #8b0000;
+    background: white;
+    color: #8b0000;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #8b0000;
+    color: white;
+}
+
+/* HIDE SECTIONS BY DEFAULT */
+.section-content {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #3a1f0f;
+    color: white;
+    margin-top: 60px;
+}
+</style>
+
+<script>
+function showSection(sectionId, button) {
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(sec => sec.style.display = 'none');
+
+    const buttons = document.querySelectorAll('.section-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(sectionId).style.display = 'block';
+    button.classList.add('active');
+}
+</script>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <h1>Banga ng Pagkatuto at Kaalaman</h1>
+    <p>educ 322</p>
+</header>
+
+<!-- NAV -->
+<nav class="sub-nav">
+    <a href="index.html">← Bumalik</a>
+  
+</nav>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+    <h2>Maligayang Pagdating!</h2>
+    <p>Pumili ng kategorya sa ibaba upang simulan ang paglalakbay sa mundo ng edukasyon at kaalaman.</p>
+
+    <!-- SECTION BUTTONS -->
+    <div class="section-buttons">
+        <button class="active" onclick="showSection('lesson1', this)">Lesson 1</button>
+        <button onclick="showSection('lesson2', this)">Lesson 2</button>
+        <button onclick="showSection('activities', this)">Activities</button>
+        <button onclick="showSection('portfolio', this)">Portfolio</button>
+    </div>
+
+    <!-- SECTIONS -->
+    <div id="lesson1" class="section-content" style="display:block;">
+        <div class="cards">
+            <div class="card">
+                <h3>Lesson 1</h3>
+                <p>Introduksyon sa Edukasyon</p>
+                <button>Buksan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="lesson2" class="section-content">
+        <div class="cards">
+            <div class="card">
+                <h3>Lesson 2</h3>
+                <p>Mga Teorya sa Pagkatuto</p>
+                <button>Buksan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="activities" class="section-content">
+        <div class="cards">
+            <div class="card">
+                <h3>Activities</h3>
+                <p>Mga Gawain at Pagsasanay</p>
+                <button>Buksan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="section-content">
+        <div class="cards">
+            <div class="card">
+                <h3>Portfolio</h3>
+                <p>Compilation ng Outputs</p>
+                <button>Buksan</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 | Pintig ng Panitikan - Educational
+</footer>
+
+</body>
+</html>
